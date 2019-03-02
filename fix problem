@@ -1,0 +1,6 @@
+While I was trying to run “heroku run rake db:migrate” command, I got “Operation timed out – connect(2) (Errno::ETIMEDOUT)” error. I spent hours to figure out what the reason is for that and realized that the internet provider in Italy, FASTWEB blocks the port number 5000. Therefore run command will not be able to executed. To handle this problem, what you need to do is simple: Just use “run:detached” i.e.
+
+    heroku run:detached rake db:migrate
+    
+i forced git to merge the unrelated history by the command
+git merge--allow-unrelated-histories
